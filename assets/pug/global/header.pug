@@ -1,0 +1,15 @@
+header.header 
+	.section_in 
+		.header_main
+			.header_logo 
+				a(href="#")
+					img(src="i/logo.svg", alt="") 
+			.header_menu 
+				ul
+					each item in ['Тарифы', 'Подключение', 'Условия', 'О нас', 'Контакты']
+						li 
+							a(href="#")=item 
+			.header_mobil 
+				a(href="#" class="yellow") +7 937 140 19 81
+				a(href="#" class="yellow") +7 926 282 88 54
+				
