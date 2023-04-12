@@ -1,0 +1,42 @@
+.popup.popup_submit(data-id="form")
+	.popup_form_bg.close_popups.remove
+	.popup_form_w
+		.popup_close.close_popups.remove 
+			button(type="button")
+				+icon('close')
+		.popup_form_head 
+			h3 Заполните форму
+			p Мы свяжемся с вами в ближайшее время
+		form.popup_form
+			.popup_form_input
+				input(type="text" placeholder="Имя")
+			.popup_form_input
+				input(type="tel" placeholder="Телефон")
+			.popup_form_input
+				input(type="text" placeholder="Город")
+			.popup_form_bottom
+				.popup_form_btn 
+					button(type="submit") Отправить
+				.popup_policy!='Отправляя форму, вы соглашаетесь с <a href="#"> политикой конфиденциальности</a>.'
+
+
+
+
+.popup.popup_menu(data-id="menu")
+	.popup_form_bg_m.close_popups.remove 
+	.popup_form_m
+		.popup_close_m.close_popups.remove 
+			button(type="button")
+				+icon('close')
+		.popup_menu_head 
+			.popup_logo 
+				a(href="#")
+					img(src="i/logo.svg", alt="")
+		.popup_menu 
+			ul
+				each item in ['Тарифы', 'Подключение', 'Условия', 'О нас', 'Контакты']
+					li.remove
+						a(href="#")=item  
+		.popup_tel.remove
+			a(href="#") +7 937 140 19 81
+			a(href="#") +7 926 282 88 54

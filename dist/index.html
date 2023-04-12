@@ -25,6 +25,7 @@
             </ul>
           </div>
           <div class="header_mobil"> <a class="yellow" href="#">+7 937 140 19 81</a><a class="yellow" href="#">+7 926 282 88 54</a></div>
+          <div class="burger_trigger trigger" data-target="menu"><span></span><span></span><span></span></div>
         </div>
       </div>
     </header>
@@ -37,7 +38,7 @@
                 <h1>Подключение водителей</h1>
                 <h2>к <span>Я</span>ндекс такси</h2>
                 <p>Мы работаем с 2018 года. Являемся сертифицированным партнером ситимобил 1 категории.</p>
-                <button type="button">Подключиться
+                <button class="trigger" type="button" data-target="form">Подключиться
                   <svg class="icon icon-arrowright ">
                     <use xlink:href="i/sprite/sprite.svg#arrowright"></use>
                   </svg>
@@ -84,7 +85,7 @@
                 <li>
                   <div class="li_col_left"> 
                     <p>Доставка</p>
-                    <button class="btnAll" type="button">Подключиться
+                    <button class="btnAll trigger" type="button" data-target="form">Подключиться
                       <svg class="icon icon-arrowright ">
                         <use xlink:href="i/sprite/sprite.svg#arrowright"></use>
                       </svg>
@@ -95,7 +96,7 @@
                 <li> 
                   <div class="li_col_left"> 
                     <p>Грузовой</p>
-                    <button class="btnAll" type="button">Подключиться
+                    <button class="btnAll trigger" type="button" data-target="form">Подключиться
                       <svg class="icon icon-arrowright ">
                         <use xlink:href="i/sprite/sprite.svg#arrowright"></use>
                       </svg>
@@ -118,7 +119,7 @@
                   <li>
                     <div class="other_col_left"> 
                       <p>Elite</p>
-                      <button class="btnAll" type="button">Подключиться
+                      <button class="btnAll trigger" type="button" data-target="form">Подключиться
                         <svg class="icon icon-arrowright ">
                           <use xlink:href="i/sprite/sprite.svg#arrowright"></use>
                         </svg>
@@ -129,7 +130,7 @@
                   <li>
                     <div class="other_col_left"> 
                       <p>Elite</p>
-                      <button class="btnAll" type="button">Подключиться
+                      <button class="btnAll trigger" type="button" data-target="form">Подключиться
                         <svg class="icon icon-arrowright ">
                           <use xlink:href="i/sprite/sprite.svg#arrowright"></use>
                         </svg>
@@ -140,7 +141,7 @@
                   <li>
                     <div class="other_col_left"> 
                       <p>Elite</p>
-                      <button class="btnAll" type="button">Подключиться
+                      <button class="btnAll trigger" type="button" data-target="form">Подключиться
                         <svg class="icon icon-arrowright ">
                           <use xlink:href="i/sprite/sprite.svg#arrowright"></use>
                         </svg>
@@ -151,7 +152,7 @@
                   <li>
                     <div class="other_col_left"> 
                       <p>Elite</p>
-                      <button class="btnAll" type="button">Подключиться
+                      <button class="btnAll trigger" type="button" data-target="form">Подключиться
                         <svg class="icon icon-arrowright ">
                           <use xlink:href="i/sprite/sprite.svg#arrowright"></use>
                         </svg>
@@ -162,7 +163,7 @@
                   <li>
                     <div class="other_col_left"> 
                       <p>Elite</p>
-                      <button class="btnAll" type="button">Подключиться
+                      <button class="btnAll trigger" type="button" data-target="form">Подключиться
                         <svg class="icon icon-arrowright ">
                           <use xlink:href="i/sprite/sprite.svg#arrowright"></use>
                         </svg>
@@ -173,7 +174,7 @@
                   <li>
                     <div class="other_col_left"> 
                       <p>Elite</p>
-                      <button class="btnAll" type="button">Подключиться
+                      <button class="btnAll trigger" type="button" data-target="form">Подключиться
                         <svg class="icon icon-arrowright ">
                           <use xlink:href="i/sprite/sprite.svg#arrowright"></use>
                         </svg>
@@ -189,17 +190,17 @@
         <section class="action"> 
           <div class="section_in">
             <div class="action_main"> 
-              <div class="action_right"> <img src="i/galery/action.png" alt=""></div>
-              <div class="action_left"> 
-                <div class="action_left_head"> 
+              <div class="action_left"> <img src="i/galery/action.png" alt=""></div>
+              <div class="action_right">
+                <div class="action_right_head"> 
                   <h2>Акция “Приведи друга”</h2>
                 </div>
-                <div class="action_left_info"> 
+                <div class="action_right_info"> 
                   <p>На ежемесячной основе таксопарк выплачивает 1% от общего наката (друга).</p>
                   <p>Это в среднем 100,000 – 150,000 (т.е. за каждого привлеченного друга 1000-1500 руб в месяц. Количество не ограничено).</p>
                 </div>
-                <div class="action_left_button"> 
-                  <button type="button">Подключиться
+                <div class="action_right_button"> 
+                  <button class="trigger" type="button" data-target="form">Подключиться
                     <svg class="icon icon-arrowright ">
                       <use xlink:href="i/sprite/sprite.svg#arrowright"></use>
                     </svg>
@@ -218,28 +219,46 @@
               <div class="connect_info"> 
                 <ul> 
                   <li>
-                    <h3>Заявка</h3>
-                    <p>Вы оставляете заявку на нашем сайте или звоните по телефону.</p>
+                    <div class="li_number"> <span>1</span></div>
+                    <div class="li_txt">
+                      <h3>Заявка</h3>
+                      <p>Вы оставляете заявку на нашем сайте или звоните по телефону.</p>
+                    </div>
                   </li>
                   <li>
-                    <h3>Заявка</h3>
-                    <p>Вы оставляете заявку на нашем сайте или звоните по телефону.</p>
+                    <div class="li_number"> <span>1</span></div>
+                    <div class="li_txt">
+                      <h3>Заявка</h3>
+                      <p>Вы оставляете заявку на нашем сайте или звоните по телефону.</p>
+                    </div>
                   </li>
                   <li>
-                    <h3>Заявка</h3>
-                    <p>Вы оставляете заявку на нашем сайте или звоните по телефону.</p>
+                    <div class="li_number"> <span>1</span></div>
+                    <div class="li_txt">
+                      <h3>Заявка</h3>
+                      <p>Вы оставляете заявку на нашем сайте или звоните по телефону.</p>
+                    </div>
                   </li>
                   <li>
-                    <h3>Заявка</h3>
-                    <p>Вы оставляете заявку на нашем сайте или звоните по телефону.</p>
+                    <div class="li_number"> <span>1</span></div>
+                    <div class="li_txt">
+                      <h3>Заявка</h3>
+                      <p>Вы оставляете заявку на нашем сайте или звоните по телефону.</p>
+                    </div>
                   </li>
                   <li>
-                    <h3>Заявка</h3>
-                    <p>Вы оставляете заявку на нашем сайте или звоните по телефону.</p>
+                    <div class="li_number"> <span>1</span></div>
+                    <div class="li_txt">
+                      <h3>Заявка</h3>
+                      <p>Вы оставляете заявку на нашем сайте или звоните по телефону.</p>
+                    </div>
                   </li>
                   <li>
-                    <h3>Заявка</h3>
-                    <p>Вы оставляете заявку на нашем сайте или звоните по телефону.</p>
+                    <div class="li_number"> <span>1</span></div>
+                    <div class="li_txt">
+                      <h3>Заявка</h3>
+                      <p>Вы оставляете заявку на нашем сайте или звоните по телефону.</p>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -376,7 +395,7 @@
               <div class="video_head"> 
                 <h2>Видео с инструкцией подключения</h2>
               </div>
-              <div class="video_instuction"> <a href="https://www.youtube.com/watch?v=X1xaCsLp-6Y&amp;list=RDX1xaCsLp-6Y&amp;start_radio=1" data-fancybox="video"> <img src="i/video.png" alt="">
+              <div class="video_instuction"> <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" data-fancybox="video"> <img src="i/video.png" alt="">
                   <button type="button">
                     <svg class="icon icon-play ">
                       <use xlink:href="i/sprite/sprite.svg#play"></use>
@@ -455,11 +474,14 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 <br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                   </div>
                   <div class="company_btn_more showMoreBtn">
                     <p class="btnAll">Показать больше
-                      <svg class="icon icon-arrowright ">
-                        <use xlink:href="i/sprite/sprite.svg#arrowright"></use>
+                      <svg class="icon icon-arrowbottom ">
+                        <use xlink:href="i/sprite/sprite.svg#arrowbottom"></use>
                       </svg>
                     </p>
                   </div>
@@ -476,14 +498,18 @@
                   <h2>Наши контакты</h2>
                 </div>
                 <div class="contact_mobil"> 
-                  <p>Телефон</p><a href="#">+7 937 140 19 81</a><a href="#">+7 926 282 88 54</a>
+                  <p>Телефон</p>
+                  <ul> 
+                    <li><a href="#">+7 937 140 19 81</a></li>
+                    <li><a href="#">+7 926 282 88 54</a></li>
+                  </ul>
                 </div>
                 <div class="contacn_mail"> 
                   <p>Почта</p><a href="#">mail@mail.ru</a>
                 </div>
                 <div class="contact_addres"> 
                   <p>Адрес</p>
-                  <p>Адрес ____________________</p>
+                  <p>Адрес ______________</p>
                 </div>
               </div>
               <div class="contact_right"> 
@@ -536,6 +562,64 @@
     <script src="js/libs.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/main.js"></script>
+    <div class="popup popup_submit" data-id="form">
+      <div class="popup_form_bg close_popups remove"></div>
+      <div class="popup_form_w">
+        <div class="popup_close close_popups remove"> 
+          <button type="button">
+            <svg class="icon icon-close ">
+              <use xlink:href="i/sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="popup_form_head"> 
+          <h3>Заполните форму</h3>
+          <p>Мы свяжемся с вами в ближайшее время</p>
+        </div>
+        <form class="popup_form">
+          <div class="popup_form_input">
+            <input type="text" placeholder="Имя">
+          </div>
+          <div class="popup_form_input">
+            <input type="tel" placeholder="Телефон">
+          </div>
+          <div class="popup_form_input">
+            <input type="text" placeholder="Город">
+          </div>
+          <div class="popup_form_bottom">
+            <div class="popup_form_btn"> 
+              <button type="submit">Отправить</button>
+            </div>
+            <div class="popup_policy">Отправляя форму, вы соглашаетесь с <a href="#"> политикой конфиденциальности</a>.</div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="popup popup_menu" data-id="menu">
+      <div class="popup_form_bg_m close_popups remove"> </div>
+      <div class="popup_form_m">
+        <div class="popup_close_m close_popups remove"> 
+          <button type="button">
+            <svg class="icon icon-close ">
+              <use xlink:href="i/sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="popup_menu_head"> 
+          <div class="popup_logo"> <a href="#"><img src="i/logo.svg" alt=""></a></div>
+        </div>
+        <div class="popup_menu"> 
+          <ul>
+            <li class="remove"><a href="#">Тарифы</a></li>
+            <li class="remove"><a href="#">Подключение</a></li>
+            <li class="remove"><a href="#">Условия</a></li>
+            <li class="remove"><a href="#">О нас</a></li>
+            <li class="remove"><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="popup_tel remove"><a href="#">+7 937 140 19 81</a><a href="#">+7 926 282 88 54</a></div>
+      </div>
+    </div>
     <div class="alert success">
       <div class="alert_main"> 
         <p>Ваше сообщение успешно отправлено!</p>

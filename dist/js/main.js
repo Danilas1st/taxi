@@ -19,7 +19,8 @@ $(document).ready(function ($) {
 $(window).on('load', function () {
 	updateSizes();
 	loadFunc();
-	showMoreText()
+	showMoreText();
+	modal();
 });
 
 $(window).on('resize', function () {
@@ -190,8 +191,8 @@ function showMoreText() {
         this.innerHTML = `
 					<div class="company_btn_more showMoreBtn active_more_btn"> 
 						<p>Свернуть</p>
-						<svg class="icon icon-arrowright ">
-							<use xlink:href="i/sprite/sprite.svg#arrowright"></use>
+						<svg class="icon icon-arrobottom ">
+							<use xlink:href="i/sprite/sprite.svg#arrowbottom"></use>
 						</svg>
 					</div>
         `
@@ -199,8 +200,8 @@ function showMoreText() {
         this.innerHTML = `
         	<div class="company_btn_more showMoreBtn"> 
 						<p>Показать больше</p>
-						<svg class="icon icon-arrowright ">
-							<use xlink:href="i/sprite/sprite.svg#arrowright"></use>
+						<svg class="icon icon-arrowbottom ">
+							<use xlink:href="i/sprite/sprite.svg#arrowbottom"></use>
 						</svg>
 					</div>
         `;
@@ -210,6 +211,51 @@ function showMoreText() {
 }
 
 
+
+function modal() {
+	let popup = document.querySelectorAll('.popup')
+	let btnArray = document.querySelectorAll('.trigger')
+	
+	btnArray.forEach((el) => {
+		el.addEventListener('click', function(e) {
+			e.preventDefault();
+			let path = e.currentTarget.dataset.target
+			
+			popup.forEach((el) => {
+				if(el.dataset.id == path) {
+					isOpen(el)
+				}
+			})
+			
+		})
+	})
+	
+
+	popup.forEach((pop) => {
+		let remove = pop.querySelectorAll('.remove')
+		remove.forEach(el => {
+			el.addEventListener('click', (e) => {
+				isRemove(pop);
+			})
+		});
+	})
+}
+
+
+
+function isOpen(popup) {
+	document.body.classList.add('fixed')
+	popup.classList.add('active')
+
+	if(swiperProject) {
+		swiperProject.init();
+	}
+}
+
+function isRemove(popup) {
+	popup.classList.remove('active')
+	document.body.classList.remove('fixed')
+}
 
 
 

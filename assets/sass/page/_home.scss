@@ -15,6 +15,9 @@
 .hero_main {
 	padding: 11.9rem 0 17.2rem 0;
 	@include flex-space;
+	@include bp($point_2) {
+		padding: 8rem 0;
+	}
 }
 .hero_main_left {
 	h2 {
@@ -31,7 +34,7 @@
 		max-width: 57rem;
 		margin-bottom: 5rem;
 	}
-	button {
+	button, input[type="submit"] {
 		@include flex-space;
 		background: $yellow;
 		padding: 2.5rem 5rem;
@@ -43,6 +46,11 @@
 		}
 	}
 	margin-top: -6.2rem;
+	@include bp($point_5) {
+		h2 {
+			font-size: 3.5rem;
+		}	
+	}
 }
 .icon {
 	margin-left: 1.5rem;
@@ -55,6 +63,12 @@
 	border-radius: 1.5rem;
 	text-align: center;
 	max-width: 50rem;
+	@include bp($point_2) {
+		padding: 2rem 3rem;	
+	}
+	@include bp($point_5) {
+		display: none;
+	}
 }
 .hero_form_head {
 	h2 {
@@ -66,6 +80,22 @@
 	p {
 		font-size: 2rem;
 		margin-bottom: 3rem;
+	}
+	@include bp($point_2) {
+		h2 {
+			margin-bottom: 1rem;
+		}	
+		p {
+			margin-bottom: 1.5rem;
+		}
+	}
+	@include bp($point_5) {
+		h2 {
+			font-size: 2rem;
+		}
+		p {
+			font-size: 1.8rem;
+		}
 	}
 }
 .hero_main_form {
@@ -82,6 +112,9 @@
 		border-radius: 1rem;
 		padding: 2rem;
 		width: 100%;
+		@include bp($point_2) {
+			padding: 1.5rem;
+		}
 	}
 	margin-bottom: 3rem;
 }
@@ -99,6 +132,9 @@
 		&:hover {
 			background: $orange;
 		}
+		@include bp($point_2) {
+			padding: 1.5rem;
+		}
 	}
 }
 .hero_policy {
@@ -106,6 +142,9 @@
 	font-size: 1.6rem;
 	a {
 		border-bottom: .1rem solid $black;
+	}
+	@include bp($point_5) {
+		font-size: 1.4rem;	
 	}
 }
 .basis {
@@ -124,6 +163,17 @@
 		box-shadow: 0 .8rem 6rem rgba(63, 63, 63, 0.15);
 		border-radius: 1.5rem;
 	}
+	@include bp($point_2) {
+		padding: 8rem 0;	
+		li {
+			height: 25rem;
+		}
+	}
+	@include bp($point_5) {
+		ul {
+			grid-gap: 4rem 2rem;
+		}	
+	}
 }
 .basis_head {
 	margin-bottom: 6rem;
@@ -133,9 +183,15 @@
 	top: 4rem;
 	left: 4rem;
 	p {
-		margin-bottom: 23rem;
+		margin-bottom: 22rem;
 		color: $white;
 		font-family: $font_3;
+		font-size: 2.5rem;
+	}
+	@include bp($point_2) {
+		p {
+			margin-bottom: 13rem;
+		}	
 	}
 }
 .btnAll {
@@ -147,11 +203,19 @@
 	}
 }
 .li_col_right {
+	@include bp($point_5) {
+		img {
+			margin-top: 5rem;
+		}	
+	}
 }
 .other {
 }
 .other_main {
 	padding: 0 0 20rem 0;
+	@include bp($point_2) {
+		padding: 0 0 8rem 0;
+	}
 }
 .other_head {
 	margin-bottom: 6rem;
@@ -169,12 +233,24 @@
 		box-shadow: 0 .8rem 6rem rgba(63, 63, 63, 0.15);
 		border-radius: 1.5rem;
 	}
+	@include bp($point_2) {
+		ul {
+			grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+		}	
+	}
+	@include bp($point_5) {
+		ul {
+			grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+		}
+	}
 }
 .other_col_left {
 	padding: 3rem 0 0 3rem;
 	
 	p {
 		color: $white;
+		font-size: 2.3rem;
+		font-family: $font_3;
 		margin-bottom: 10rem;
 	}
 }
@@ -182,25 +258,40 @@
 	img {
 		margin-top: 3rem;
 	}
+	@include bp($point_5) {
+		img {
+			margin-top: 6rem;
+		}	
+	}
 }
 .action {
 }
 .action_main {
-	@include flex-space;
-	align-items: flex-start;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+	grid-gap: 0 6rem;
 	padding: 0 0 20rem 0;
-}
-.action_right {
-	img {
-		border-radius: 1.5rem;
+	@include bp($point_2) {
+		padding: 0 0 8rem 0;
 	}
 }
 .action_left {
+	img {
+		border-radius: 1.5rem;
+	}
+	@include bp($point_5) {
+		margin-bottom: 3rem;
+	}
 }
-.action_left_head {
+.action_right {
+}
+.action_right_head {
 	margin-bottom: 3rem;
+	@include bp($point_2) {
+		margin-bottom: 1.5rem;	
+	}
 }
-.action_left_info {
+.action_right_info {
 	max-width: 58rem;
 	margin-bottom: 5rem;
 	p {
@@ -209,8 +300,16 @@
 			margin-bottom: 3rem;
 		}
 	}
+	@include bp($point_2) {
+		margin-bottom: 2.3rem;
+		p {
+			&:not(:last-child) {
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
 }
-.action_left_button {
+.action_right_button {
 	max-width: 26.6rem;
 	button {
 		background: $yellow;
@@ -223,7 +322,12 @@
 		transition: all .4s ease;
 	&:hover {
 		background: $orange;
+		}
 	}
+	@include bp($point_5) {
+		button {
+			padding: 2rem;
+		}
 	}
 }
 .connect {
@@ -240,9 +344,15 @@
 }
 .connect_main {
 	padding: 16rem 0 25rem 0;
+	@include bp($point_2) {
+		padding: 8rem 0;
+	}
 }
 .connect_head {
 	margin-bottom: 10rem;
+	@include bp($point_5) {
+		margin-bottom: 6rem;
+	}
 }
 .connect_info {
 	ul {
@@ -251,22 +361,14 @@
 		grid-gap: 13rem 4rem;
 	}
 	li {
-		position: relative;
-		counter-increment: item;
-		&:before {
-			position: absolute;
-			content: "" counter(item);
-			bottom: 20%;
-			left: -23%;
-			font-size: 2.5rem;
-			color: #171717;
-			z-index: 1;
-			font-family: $font_3;
+		@include flex-space;
+		max-width: 38rem;
+		span {
 			background: $yellow;
-			width: 6.7rem;
-			height: 6.7rem;
-			@include flex-center;
-			border-radius: 4rem;
+			padding: 1.8rem 2.8rem;
+			border-radius: 5rem;
+			font-size: 2.5rem;
+			font-family: $font_3;
 		}
 	}
 	h3 {
@@ -280,11 +382,30 @@
 		color: $white;
 		max-width: 28rem;
 	}
+	@include bp($point_2) {
+		ul {
+			grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+			grid-gap: 5rem 4rem;
+		}	
+	}
+	@include bp($point_5) {
+		ul {
+			grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
+		}	
+	}
+}
+.li_number {
+	@include bp($point_5) {
+		margin-right: 2rem;
+	}
 }
 .conditions {
 }
 .conditions_main {
 	padding: 20rem 0 0 0;
+	@include bp($point_2) {
+		padding: 8rem 0 0 0;	
+	}
 }
 .conditions_head {
 	margin-bottom: 6rem;
@@ -292,12 +413,28 @@
 .conditions_info {
 	margin-bottom: 20rem;
 	ul {
-		@include flex-space;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+		grid-gap: 0 4.2rem;
 	}
 	li {
 		background: rgba(255, 255, 255, 0.07);
 		border-radius: 1.5rem;
 		height: 57rem;
+	}
+	@include bp($point_2) {
+		margin-bottom: 8rem;
+		li {
+			height: 49rem;
+		}
+	}
+	@include bp($point_5) {
+		ul {
+			grid-gap: 2rem 4.2rem;
+		}
+		li {
+			height: 44rem;
+		}	
 	}
 }
 .conditions_img {
@@ -308,30 +445,35 @@
 	h3 {
 		font-size: 2.3rem;
 	}
+	@include bp($point_5) {
+		h3 {
+			font-size: 2rem;
+		}	
+	}
 }
 .conditions_parametrs {
 	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	text-align: left;
-	padding: 0 0 0 3rem;
-	ul {
-		@include flex-col;
-	}
+	padding: 0 0 4rem 3rem;
 	li {
 		height: 100%;
 		width: 100%;
 		display: flex;
 		align-items: center;
 		background: none;
-		&:not(:last-child) {
-			margin-bottom: 2rem;
-		}
+		margin-bottom: 2rem;
 	}
 	p {
 		color: $white;
 		font-size: 2rem;
 		font-family: $font_1;
+	}
+	@include bp($point_5) {
+		li {
+			margin-bottom: 1rem;
+		}
+		P {
+			font-size: 1.6rem;
+		} 	
 	}
 }
 .conditions_icon {
@@ -350,6 +492,10 @@
 .video {
 }
 .video_main {
+	padding: 0 0 20rem 0;
+	@include bp($point_2) {
+		padding: 0 0 8rem 0;	
+	}
 }
 .video_head {
 	margin-bottom: 6rem;
@@ -368,74 +514,243 @@
 		height: 8rem;
 		border-radius: 1.5rem;
 	}
+	@include bp($point_5) {
+	button {
+		left: 40%;
+		width: 6.4rem;
+		height: 4rem;
+	}	
+	}
 }
 .icon-play {
 	width: 3rem;
 	height: 3.4rem;
 	color: $orange;
 	margin: 0;
+	@include bp($point_5) {
+		width: 1.6rem;
+		height: 2rem;	
+	}
 }
 .choise {
 }
 .choise_main {
+	padding: 0 0 20rem 0;
+	@include bp($point_2) {
+		padding: 0 0 8rem 0;	
+	}
 }
 .choise_head {
+	margin-bottom: 10rem;
+	@include bp($point_5) {
+		margin-bottom: 6rem;	
+	}
 }
 .choise_info {
+	ul {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+		grid-gap: 0 8.8rem;
+	}
+	@include bp($point_2) {
+		ul {
+			grid-gap: 0 4.8rem;	
+		}
+	}
+	@include bp($point_5) {
+		ul {
+			grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+			grid-gap: 5rem 2.2rem;
+		}	
+	}
 }
 .choise_img {
+	width: 6rem;
+	height: 6rem;
+	@include flex-center;
+	background: $yellow;
+	border-radius: 1rem;
+	margin-bottom: 3rem;
+	@include bp($point_5) {
+		margin-bottom: 1.5rem;
+	}
 }
 .icon-star {
+	margin: 0;
 }
 .choise_txt {
+	h3 {
+		font-size: 2.3rem;
+		margin-bottom: 1.8rem;
+	}
+	p {
+		color: $white;
+		font-size: 1.7rem;
+	}
+	@include bp($point_5) {
+		h3 {
+			font-size: 2rem;
+		}
+		p {
+			font-size: 1.6rem;
+		}
+	}
 }
 .company {
 }
 .company_main {
+	padding: 0 0 20rem 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+	grid-gap: 0 6rem;
+	@include bp($point_2) {
+		padding: 0 0 8rem 0;	
+	}
 }
 .company_left {
+	@include bp($point_5) {
+		margin-bottom: 3rem;	
+	}
 }
 .company_right {
 }
 .company_head {
+	@include bp($point_5) {
+		margin-bottom: 2rem;	
+	}
 }
 .company_info {
 }
 .company_txt {
+	margin-bottom: 3.5rem;
+	color: $white;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 4;
+	-webkit-line-clamp: 10;
 	&.visible {
 		max-height: 100rem;
 		-webkit-line-clamp: 1000;
 	}
+	br {
+		margin-bottom: 1.5rem;
+	}
+	@include bp($point_5) {
+		margin-bottom: 2rem;	
+	}
 }
 .company_btn_more {
 	display: flex;
-	align-items: baseline;
+	align-items: center;
 	cursor: pointer;
 	color: $orange;
 	&.active_more_btn {
 		color: $yellow;
+		svg {
+			rotate: 180deg;
+		}
 	}
 }
 .contact {
+	position: relative;
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: url('../../i/bgcontact.png') center/cover no-repeat;
+		z-index: -1;
+	}
 }
 .contact_main {
-	display: flex;
+	@include flex-space;
+	padding: 12rem 0 7.4rem 0;
+	@include bp($point_2) {
+		padding: 8rem 0;	
+	}
+	@include bp($point_5) {
+		flex-direction: column;	
+	}
 }
 .contact_left {
+	@include bp($point_5) {
+		margin-bottom: 4rem;	
+	}
 }
 .contact_head {
+	margin-bottom: 6rem;
+	@include bp($point_5) {
+		margin-bottom: 4rem;	
+	}
 }
 .contact_mobil {
+	margin-bottom: 5rem;
+	color: $white;
+	ul {
+		@include flex-col;
+	}
+	li {
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+	p {
+		margin-bottom: 2rem;
+	}
+	a {
+		@include accent-link;
+		color: $white;
+		font-family: $font_3;
+		font-size: 2.5rem;
+	}
+	@include bp($point_5) {
+		margin-bottom: 3rem;
+		a {
+			font-size: 2rem;
+		}	
+	}
 }
 .contacn_mail {
+	color: $white;
+	@include flex-col;
+	margin-bottom: 5rem;
+	p {
+		margin-bottom: 2rem;
+	}
+	a {
+		@include accent-link;
+		color: $white;
+		font-family: $font_3;
+		font-size: 2.5rem
+	}
+	@include bp($point_5) {
+		margin-bottom: 3rem;	
+		a {
+			font-size: 2rem;
+		}	
+	}
 }
 .contact_addres {
+	color: $white;
+	p {
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+		&:last-child {
+			font-family: $font_3;
+			font-size: 2.5rem;
+			@include bp($point_5) {
+				font-size: 2rem;
+			}
+		}
+	}
 }
 .contact_right {
 	background: $white;
+	padding: 4.5rem 5rem;
+	border-radius: 1.5rem;
+	text-align: center;
+	max-width: 50rem;
 }

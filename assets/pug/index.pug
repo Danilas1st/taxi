@@ -10,7 +10,7 @@ block content_block
 					h1 Подключение водителей
 					h2 к <span>Я</span>ндекс такси
 					p Мы работаем с 2018 года. Являемся сертифицированным партнером ситимобил 1 категории.
-					button(type="button") Подключиться
+					button(type="button" data-target="form" class="trigger") Подключиться
 						+icon('arrowright')
 				.hero_main_right
 					.hero_form_head 
@@ -38,14 +38,14 @@ block content_block
 					li
 						.li_col_left 
 							p Доставка
-							button(type="button" class="btnAll") Подключиться
+							button(type="button" class="btnAll" data-target="form" class="trigger") Подключиться
 								+icon('arrowright')
 						.li_col_right 
 							img(src="i/galery/deliverymain.png", alt="")
 					li 
 						.li_col_left 
 							p Грузовой
-							button(type="button" class="btnAll") Подключиться
+							button(type="button" class="btnAll" data-target="form" class="trigger") Подключиться
 								+icon('arrowright')
 						.li_col_right 
 							img(src="i/galery/cargomain.png", alt="")
@@ -60,23 +60,23 @@ block content_block
 							li
 								.other_col_left 
 									p Elite
-									button(type="button" class="btnAll") Подключиться
+									button(type="button" class="btnAll" data-target="form" class="trigger") Подключиться
 										+icon('arrowright')
 								.other_col_right 
 									img(src="i/category/elite.png", alt="")
 	section.action 
 		.section_in
 			.action_main 
-				.action_right 
-					img(src="i/galery/action.png", alt="")
 				.action_left 
-					.action_left_head 
+					img(src="i/galery/action.png", alt="")
+				.action_right
+					.action_right_head 
 						h2 Акция “Приведи друга”
-					.action_left_info 
+					.action_right_info 
 						p На ежемесячной основе таксопарк выплачивает 1% от общего наката (друга).
 						p Это в среднем 100,000 – 150,000 (т.е. за каждого привлеченного друга 1000-1500 руб в месяц. Количество не ограничено).
-					.action_left_button 
-						button(type="button") Подключиться
+					.action_right_button 
+						button(type="button" data-target="form" class="trigger") Подключиться
 							+icon('arrowright')
 	section.connect
 		.section_in 
@@ -87,8 +87,11 @@ block content_block
 					ul 
 						-for(i = 0; i < 6; i++)
 							li
-								h3 Заявка
-								p Вы оставляете заявку на нашем сайте или звоните по телефону.
+								.li_number 
+									span 1
+								.li_txt
+									h3 Заявка
+									p Вы оставляете заявку на нашем сайте или звоните по телефону.
 	section.conditions
 		.section_in 
 			.conditions_main 
@@ -166,7 +169,7 @@ block content_block
 				.video_head 
 					h2 Видео с инструкцией подключения
 				.video_instuction 
-					a(href="https://www.youtube.com/watch?v=X1xaCsLp-6Y&list=RDX1xaCsLp-6Y&start_radio=1" data-fancybox="video") 
+					a(href="https://www.youtube.com/watch?v=LXb3EKWsInQ" data-fancybox="video") 
 						img(src="i/video.png", alt="")
 						button(type="button")
 							+icon('play')
@@ -197,9 +200,12 @@ block content_block
 							<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 							<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 							<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 						.company_btn_more.showMoreBtn
 							p.btnAll Показать больше
-								+icon('arrowright')
+								+icon('arrowbottom')
 	section.contact 
 		.section_in 
 			.contact_main 
@@ -208,14 +214,17 @@ block content_block
 						h2 Наши контакты
 					.contact_mobil 
 						p Телефон
-						a(href="#") +7 937 140 19 81
-						a(href="#") +7 926 282 88 54
+						ul 
+							li
+								a(href="#") +7 937 140 19 81
+							li
+								a(href="#") +7 926 282 88 54
 					.contacn_mail 
 						p Почта
 						a(href="#") mail@mail.ru
 					.contact_addres 
 						p Адрес
-						p Адрес ____________________
+						p Адрес ______________
 				.contact_right 
 					.hero_form_head 
 						h2 Заполните форму

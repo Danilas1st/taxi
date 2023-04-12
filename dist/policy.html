@@ -25,6 +25,7 @@
             </ul>
           </div>
           <div class="header_mobil"> <a class="yellow" href="#">+7 937 140 19 81</a><a class="yellow" href="#">+7 926 282 88 54</a></div>
+          <div class="burger_trigger trigger" data-target="menu"><span></span><span></span><span></span></div>
         </div>
       </div>
     </header>
@@ -244,6 +245,64 @@
     <script src="js/libs.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/main.js"></script>
+    <div class="popup popup_submit" data-id="form">
+      <div class="popup_form_bg close_popups remove"></div>
+      <div class="popup_form_w">
+        <div class="popup_close close_popups remove"> 
+          <button type="button">
+            <svg class="icon icon-close ">
+              <use xlink:href="i/sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="popup_form_head"> 
+          <h3>Заполните форму</h3>
+          <p>Мы свяжемся с вами в ближайшее время</p>
+        </div>
+        <form class="popup_form">
+          <div class="popup_form_input">
+            <input type="text" placeholder="Имя">
+          </div>
+          <div class="popup_form_input">
+            <input type="tel" placeholder="Телефон">
+          </div>
+          <div class="popup_form_input">
+            <input type="text" placeholder="Город">
+          </div>
+          <div class="popup_form_bottom">
+            <div class="popup_form_btn"> 
+              <button type="submit">Отправить</button>
+            </div>
+            <div class="popup_policy">Отправляя форму, вы соглашаетесь с <a href="#"> политикой конфиденциальности</a>.</div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="popup popup_menu" data-id="menu">
+      <div class="popup_form_bg_m close_popups remove"> </div>
+      <div class="popup_form_m">
+        <div class="popup_close_m close_popups remove"> 
+          <button type="button">
+            <svg class="icon icon-close ">
+              <use xlink:href="i/sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="popup_menu_head"> 
+          <div class="popup_logo"> <a href="#"><img src="i/logo.svg" alt=""></a></div>
+        </div>
+        <div class="popup_menu"> 
+          <ul>
+            <li class="remove"><a href="#">Тарифы</a></li>
+            <li class="remove"><a href="#">Подключение</a></li>
+            <li class="remove"><a href="#">Условия</a></li>
+            <li class="remove"><a href="#">О нас</a></li>
+            <li class="remove"><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="popup_tel remove"><a href="#">+7 937 140 19 81</a><a href="#">+7 926 282 88 54</a></div>
+      </div>
+    </div>
     <div class="alert success">
       <div class="alert_main"> 
         <p>Ваше сообщение успешно отправлено!</p>

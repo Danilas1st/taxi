@@ -3,12 +3,32 @@
 .section_in {
 }
 .footer_main {
+	padding: 3rem 0;
+	@include flex-space;
+	@include bp($point_5) {
+		flex-direction: column	
+	}
 }
 .footer_left {
+	@include flex-space;
+	@include bp($point_5) {
+		flex-direction: column;	
+	}
 }
 .footer_copyright {
+	margin-right: 7.4rem;
+	color: $white;
+	@include bp($point_5) {
+		margin: 0 0 2rem 0;	
+	}
 }
 .footer_policy {
+	a {
+		color: $white;
+	}
+	@include bp($point_5) {
+		margin-bottom: 2rem;
+	}
 }
 .footer_arkada {
 }
