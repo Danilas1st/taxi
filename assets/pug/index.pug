@@ -36,19 +36,21 @@ block content_block
 					h2 Основные тарифы
 				ul
 					li
-						.li_col_left 
-							p Доставка
-							button(type="button" class="btnAll" data-target="form" class="trigger") Подключиться
-								+icon('arrowright')
-						.li_col_right 
-							img(src="i/galery/deliverymain.png", alt="")
+						button(type="button" class="btnAll" data-target="form" class="trigger")
+							.li_col_left 
+								h3 Доставка
+								p Подключиться
+									+icon('arrowright')
+							.li_col_right 
+								img(src="i/galery/deliverymain.png", alt="")
 					li 
-						.li_col_left 
-							p Грузовой
-							button(type="button" class="btnAll" data-target="form" class="trigger") Подключиться
-								+icon('arrowright')
-						.li_col_right 
-							img(src="i/galery/cargomain.png", alt="")
+						button(type="button" class="btnAll" data-target="form" class="trigger")
+							.li_col_left 
+								h3 Грузовой
+								p Подключиться
+									+icon('arrowright')
+							.li_col_right 
+								img(src="i/galery/cargomain.png", alt="")
 	section.other
 		.section_in 
 			.other_main
@@ -58,12 +60,13 @@ block content_block
 					ul 
 						-for(i = 0; i < 6; i++)
 							li
-								.other_col_left 
-									p Elite
-									button(type="button" class="btnAll" data-target="form" class="trigger") Подключиться
-										+icon('arrowright')
-								.other_col_right 
-									img(src="i/category/elite.png", alt="")
+								button(type="button" class="btnAll" data-target="form" class="trigger")
+									.other_col_left 
+										h3 Elite
+										p Подключиться
+											+icon('arrowright')
+									.other_col_right 
+										img(src="i/category/elite.png", alt="")
 	section.action 
 		.section_in
 			.action_main 
@@ -225,6 +228,7 @@ block content_block
 					.contact_addres 
 						p Адрес
 						p Адрес ______________
+
 				.contact_right 
 					.hero_form_head 
 						h2 Заполните форму
