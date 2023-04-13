@@ -165,10 +165,10 @@
 		border-radius: 1.5rem;
 		transition: all .4s ease;
 		&:hover {
+			p {
+				color: $yellow;
+			}
 			background: rgba(255, 255, 255, 0.15);
-		}
-		button {
-
 		}
 	}
 	@include bp($point_2) {
@@ -211,20 +211,12 @@
 .btnAll {
 	@include flex-space;
 	color: $orange;
-	transition: all .4s ease;
-	&:hover {
-		color: $yellow;
-	}
+	transition: all .3s ease;
 }
 .li_col_right {
 	position: absolute;
 	top: 4rem;
 	right: 0;
-	// @include bp($point_5) {
-	// 	img {
-	// 		margin-top: 5rem;
-	// 	}	
-	// }
 }
 .other {
 }
@@ -250,9 +242,11 @@
 		background: rgba(255, 255, 255, 0.07);
 		box-shadow: 0 .8rem 6rem rgba(63, 63, 63, 0.15);
 		border-radius: 1.5rem;
-		transition: all .4s ease;
 		&:hover {
 			background: rgba(255, 255, 255, 0.15);
+			p {
+				color: $yellow;
+			}
 		}
 	}
 	@include bp($point_2) {
@@ -280,6 +274,7 @@
 	p {
 		display: flex;
 		align-items: center;
+		transition: all .2s ease;
 	}
 }
 .other_col_right {
