@@ -101,9 +101,6 @@ function getRandom(min, max) {
 	return Math.random() * (max - min) + min;
 }
 
-var styles = ['color: red', 'background: black'].join(';');
-var message = 'Developed by KotoFeelGood Arkada-Studio https://arkada-web.ru/';
-console.info('%c%s', styles, message);
 
 
 
@@ -247,44 +244,12 @@ function isOpen(popup) {
 	document.body.classList.add('fixed')
 	popup.classList.add('active')
 
-	if(swiperProject) {
-		swiperProject.init();
-	}
 }
 
 function isRemove(popup) {
 	popup.classList.remove('active')
 	document.body.classList.remove('fixed')
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
