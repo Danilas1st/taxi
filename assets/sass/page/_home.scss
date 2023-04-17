@@ -250,6 +250,11 @@
 			}
 		}
 	}
+	// @include bp ($point_0) {
+	// 	li {
+	// 		overflow: hidden;
+	// 	}
+	// }
 	@include bp($point_2) {
 		ul {
 			grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
